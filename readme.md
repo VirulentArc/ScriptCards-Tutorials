@@ -1,7 +1,5 @@
 # Learning ScriptCards by Building a Dynamic Character Ability
 
-This is not a collection of finished examples to copy blindly. It is a guided exercise in **how to think through and build a ScriptCard**.
-
 By the end, you will have written a ScriptCard that:
 
 - finds a character named `TestSheet`;
