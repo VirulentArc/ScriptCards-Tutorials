@@ -50,7 +50,7 @@ The pieces are:
 |---|---|
 | `--` | Tells ScriptCards that a new statement begins |
 | `TAG` | Tells ScriptCards what kind of statement this is |
-| `\|` | Separates the tag from the content |
+| <code>&#124;</code> | Separates the tag from the content |
 | `CONTENT` | The information used by that statement |
 
 The first character of the tag usually identifies the command.
@@ -286,6 +286,24 @@ Roll20 processes `@{TestSheet|character_id}` before ScriptCards begins executing
 ScriptCards then stores that ID in `[&CharacterID]`.
 
 This is intentional. At this stage, we want the character reference resolved immediately.
+
+### Using a Selected Token Instead
+
+When you want the same builder to operate on whichever character token is selected, replace:
+
+```scard
+--&CharacterID|@{TestSheet|character_id}
+```
+
+with:
+
+```scard
+--&CharacterID|@{selected|character_id}
+```
+
+The script must be run with a token selected, and that token must represent a character. Roll20 resolves the selected token's character ID before ScriptCards begins executing.
+
+The named-character form is useful when the builder should always target one specific character. The selected-token form is more reusable when the same script should work for different characters.
 
 ## Understanding `--!ob`
 
