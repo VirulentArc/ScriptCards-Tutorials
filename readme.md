@@ -50,7 +50,7 @@ The pieces are:
 |---|---|
 | `--` | Tells ScriptCards that a new statement begins |
 | `TAG` | Tells ScriptCards what kind of statement this is |
-| `|` | Separates the tag from the content |
+| `\|` | Separates the tag from the content |
 | `CONTENT` | The information used by that statement |
 
 The first character of the tag usually identifies the command.
